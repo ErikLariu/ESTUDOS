@@ -1,0 +1,126 @@
+O Scrip roda momentaneamente no Dbeaver 
+
+Utilizando-se de comand lines para realizar ações 
+
+uma tabela pode ser montada por meio de:
+
+CREATE TABELE (nome da tabela) (
+    id_tabela SERIAL PRIMARY KEY,
+    nome varchar(50)
+)
+
+onde: 
+
+CREATE - CRIAR 
+TABELE - tabela
+
+(
+    - ENTIDADES
+)
+
+----------------------------------------------------
+
+Resumo de COMMAND LINES:
+
+(DML) - Comandos de Manipulação de Dados
+
+INSERT - INSERIR 
+INSERT INTO - INSERIR DENTRO DE *
+UPDATE - ATUALIZA UMA LISTA DE REGISTROS
+DELETE - DELETA REGISTROS
+VALUES - VALORES
+
+(DDL) - Comandos sados para criar, modificar e excluir REGISTROS
+
+CREATE TABELE - CRIAR TABELA 
+ALTER TABELE - ALTERAR TABELA   
+DROP TABELE - EXCLUI UMA TABELA 
+
+(OPC) - COMMAND LINES DDL - Opcionais
+
+PRIMARY KEY - CHAVE DE LISTA PRIMEARIA (UNICA E NÃO REPETITTIVA)
+FOREIGN KEY -CHAVE ESTRANGEIRA (FK)
+SERIAL - (AUTO INCREMENT da PRIMARY KEY) (POSTGRE)
+OR 
+AUTO_INCREMENT (SQL)
+REFERENCE - REFERENCIA UM REGISTRO
+
+(OUTROS) 
+
+WHERE - CONDIÇÃO 
+NOT NULL - NÃO PODE ESTAR VAZIO
+
+(TIPOS DE DADOS)
+
+INT - INTEIRO
+BIGINT - GRANDE NUMERO INTEIRO
+SMALLINT - PEQUENO NUMERO INTEIRO
+DECIMAL - NUMERO DECIAL
+FLOAT - NUMERO NÃO INTEIRO (PONTO FLUTUANTE)
+REAL - (PONTO FLUTUANTE)
+
+DATE - DATA (XX/XX/XX)
+TIME - HORARIO (XX:XX:XX)
+DATATIME - DATA E HORARIO (XX/XX/XX, XX:XX:XX)
+
+CHAR - TEXTO DEFINIDO (texto lido pelo N de linhas DEFINIDAS)
+VARCHAR - TEXTO FORMADO (texto lido pelo N de linhas TOTAIS)
+TEXT - TEXTO (texto longo)
+
+(RESTRICÕES)
+
+UNIQUE - duas linhas na tabela não podem ter o mesmo valor 
+
+(Praticas "lEGAIS")
+
+Definir o Tipo (valor, texto, etc)
+
+----------------------------------------------------
+
+DER (ENTIDADES):
+    
+    Itens:
+        Código:
+        Nome:
+        Tipo:
+        Quantidade:
+
+    Cardápio:   
+        Código:
+        Nome:
+        Preço:
+        Código
+        
+    Staff:
+        Código:
+        Nome:
+        Função:
+        Horas:
+
+    Pedidos:
+        Código:
+        Localização:
+        Entregador:
+        Tempo: 
+
+    Clientes:
+        Codigo:
+        Nome: 
+
+MER:
+
+Entidades:
+Pedidos (Código [PK], Localização, Entregador, Tempo, Codigo_Staff[FK], Codigo_Cardapio[FK], Codigo_Cliente[FK])
+Staff (Código [PK], Nome, Função, Horas)
+Cardapio (Código [PK], Nome, Preço, Codigo_Intens[FK])
+Itens (Código [PK], Nome, Tipo, Quantidade)
+Clientes (Codigo[PK], nome)
+
+Relacionamento:
+Staff atende Pedido (1:N)
+Pedido contem Cardapio (1:N) com Staff (1:1) destinado a Cliente (1:1)
+Cardapio possue Itens (N:N) 
+
+----------------------------------------------------
+
+Mir e Der é a idealização de um Banco de Dados em textos ou anagramas... 

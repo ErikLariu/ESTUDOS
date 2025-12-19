@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1757642400 source:/home/idk/Documentos/Estudos/CESMAC/c/geraldinho/av1/ex/ex08/main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

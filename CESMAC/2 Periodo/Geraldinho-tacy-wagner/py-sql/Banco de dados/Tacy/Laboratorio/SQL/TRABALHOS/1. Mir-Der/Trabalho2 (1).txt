@@ -1,0 +1,54 @@
+Sistema de Restaurante de Sushi
+Contextualização:
+
+    Um programador recebeu a taréfa de criar um programa para o manajamento de um restaurante.
+    Este programa deve ser capáz de atualizar o Cardápio com relação aos itens disponíveis no momento.
+    Deve integrar o sistema de pedidos para às mesas com o sistema de entregas.
+    Deve também ser capáz de manter atualizado o quadro de staff. 
+
+ 
+
+Entidades:
+    
+    Itens:
+        Código:
+        Nome:
+        Tipo:
+        Quantidade:
+
+    Cardápio:   
+        Código:
+        Nome:
+        Preço:
+        Código
+        
+    Staff:
+        Código:
+        Nome:
+        Função:
+        Horas:
+
+    Pedidos:
+        Código:
+        Localização:
+        Entregador:
+        Tempo: 
+
+    Clientes:
+        Codigo:
+        Nome: 
+
+MER:
+
+Entidades:
+Pedidos (Código [PK], Localização, Entregador, Tempo, Codigo_Staff[FK], Codigo_Cardapio[FK], Codigo_Cliente[FK])
+Staff (Código [PK], Nome, Função, Horas)
+Cardapio (Código [PK], Nome, Preço, Codigo_Intens[FK])
+Itens (Código [PK], Nome, Tipo, Quantidade)
+Clientes (Codigo[PK], nome)
+
+Relacionamento:
+Staff atende Pedido (1:N)
+Pedido contem Cardapio (1:N) com Staff (1:1) destinado a Cliente (1:1)
+Cardapio possue Itens (N:N) 
+

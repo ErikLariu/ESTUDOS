@@ -1,0 +1,39 @@
+Criação de uma Livraria: (IDEIA DA SOGRA)
+
+Locação:
+id_locacao
+id_livro
+id_cliente
+retirada
+devolução
+
+Livros:
+id_livro
+nome
+autor
+postagem
+id_categoria
+
+Categorias:
+id_categoria
+Categoria
+
+Clientes:
+id_cliente
+nome
+telefone (+23 567891234)
+cpf
+nascimento
+endereco 
+locacoes
+
+Entidades:
+locação (id_locacao [PK], id_livro[FK], id_cliente[FK])
+Livros (id_livro [PK], Nome, autor, postagem, id_categoria[FK])
+Categorias (id_categoria[PK], categoria)
+clientes (id_cliente[PK], nome, telefone, cpf, nascimento, endereco)
+
+Relacionamento:
+Clientes realiza Locação (1:N) 
+Livro aparece em Locação (1:N) pertencente a categoria (1:N)
+Locação registra Livros (1:N) pertecente a cliente (1:N)

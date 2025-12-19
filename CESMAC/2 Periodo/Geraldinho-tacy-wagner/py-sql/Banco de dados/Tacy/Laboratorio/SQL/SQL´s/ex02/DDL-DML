@@ -1,0 +1,52 @@
+-- 1. TENTATIVA DE EXCLUIR, SE EXISTIR (Para garantir uma execução limpa)
+DROP DATABASE IF EXISTS livraria;
+
+-- 2. CRIA O BANCO DE DADOS
+CREATE DATABASE livraria; 
+
+-- 3. SELECIONA O BANCO DE DADOS (Agora ele existe)
+USE livraria; 
+
+-- Aqui começam seus CREATE TABLE...
+
+CREATE TABLE clientes (
+id_cliente INT PRIMARY KEY AUTO_INCREMENT,
+nome VARCHAR(50) NOT NULL,
+telefone CHAR(13) NOT NULL, 
+
+/* 
+
+UNIQUE - TIPO DE RESTRIÇÃO 
+duas linhas na tabela não podem ter o mesmo valor 
+
+*/
+
+cpf CHAR(11) UNIQUE NOT NULL, 
+nascimento DATETIME NOT NULL,
+endereco TEXT NOT NULL
+);
+
+CREATE TABLE categorias (
+id_categoria INT PRIMARY KEY AUTO_INCREMENT,
+categoria VARCHAR(50) NOT NULL UNIQUE
+);
+
+CREATE TABLE livros (
+id_livro INT PRIMARY KEY AUTO_INCREMENT, 
+nome VARCHAR(50) NOT NULL, 
+autor VARCHAR(50) NOT NULL,
+postagem DATE NOT NULL, 
+id_categoria INT,
+FOREIGN KEY (id_categoria) 
+REFERENCES categorias(id_categoria)
+);
+
+CREATE TABLE locacao (
+id_locacao INT PRIMARY KEY AUTO_INCREMENT,
+id_cliente INT,
+id_livro INT,
+FOREIGN KEY(id_cliente) 
+REFERENCES clientes(id_cliente),
+FOREIGN KEY (id_livro) 
+REFERENCES livros(id_livro)
+);

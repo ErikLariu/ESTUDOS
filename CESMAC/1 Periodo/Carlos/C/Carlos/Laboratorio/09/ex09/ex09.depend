@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1754503607 source:/home/idk/Documentos/Estudos/CESMAC/c/laboratorio/09/ex09/main.c
+	<stdio.h>
+	<stdlib.h>
+	<locale.h>
+

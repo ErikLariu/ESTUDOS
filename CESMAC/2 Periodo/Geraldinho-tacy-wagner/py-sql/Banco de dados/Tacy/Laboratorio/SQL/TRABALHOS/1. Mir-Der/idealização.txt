@@ -1,0 +1,45 @@
+Mir e Der é a idealização de um Banco de Dados em textos ou anagramas... 
+
+Entidades:
+    
+    Itens:
+        Código:
+        Nome:
+        Tipo:
+        Quantidade:
+
+    Cardápio:   
+        Código:
+        Nome:
+        Preço:
+        Código
+        
+    Staff:
+        Código:
+        Nome:
+        Função:
+        Horas:
+
+    Pedidos:
+        Código:
+        Localização:
+        Entregador:
+        Tempo: 
+
+    Clientes:
+        Codigo:
+        Nome: 
+
+MER:
+
+Entidades:
+Pedidos (Código [PK], Localização, Entregador, Tempo, Codigo_Staff[FK], Codigo_Cardapio[FK], Codigo_Cliente[FK])
+Staff (Código [PK], Nome, Função, Horas)
+Cardapio (Código [PK], Nome, Preço, Codigo_Intens[FK])
+Itens (Código [PK], Nome, Tipo, Quantidade)
+Clientes (Codigo[PK], nome)
+
+Relacionamento:
+Staff atende Pedido (1:N)
+Pedido contem Cardapio (1:N) com Staff (1:1) destinado a Cliente (1:1)
+Cardapio possue Itens (N:N) 
