@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #1a1a2e;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ── Header ── */
+
+.header {
+  background-color: #1a1a2e;
+  color: #fff;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.logo span {
+  color: #e94560;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  font-size: 15px;
+}
+
+.nav a:hover {
+  color: #e94560;
+  transition: color 0.2s;
+}
+
+/* ── Main ── */
+
+.main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ── Destaque ── */
+
+.destaque {
+  display: flex;
+  gap: 15px;
+}
+
+.destaque-principal {
+  flex: 2;
+  background: #1a1a2e;
+  color: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  min-height: 360px;
+}
+
+.destaque-principal h2 {
+  font-size: 27px;
+  line-height: 1.3;
+}
+
+.destaque-principal p {
+  color: #c4c4cc;
+  font-size: 1rem;
+}
+
+.destaque-lateral {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.destaque-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.destaque-card h3 {
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* ── Badges ── */
+
+.badge {
+  display: inline-block;
+  width: 70px;
+  background-color: #e94560;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.badge-economia {
+  background-color: #d97706;
+}
+
+.badge-tech {
+  background-color: #059669;
+}
+
+/* ── Seção Últimas Notícias ── */
+
+.secao-titulo {
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #e94560;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  width: 32.666%;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .1);
+}
+
+.card-img {
+  height: 180px;
+}
+
+.card-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.card-body h3 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.card-body p {
+  color: #555;
+  font-size: 14px;
+  flex: 1;
+}
+
+.card-tag {
+  align-self: flex-start;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.tag-esportes { background-color: #2563eb; }
+.tag-cultura  { background-color: #7c3aed; }
+.tag-tech     { background-color: #059669; }
+.tag-politica { background-color: #dc2626; }
+.tag-economia { background-color: #d97706; }
+
+/* ── Meta ── */
+
+.meta {
+  font-size: 0.82rem;
+  color: #888;
+  margin-top: auto;
+}
+
+/* ── Footer ── */
+
+.footer {
+  background-color: #1a1a2e;
+  color: #c4c4cc;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* ── Responsivo ── */
+
+@media (max-width: 768px) {
+  .destaque {
+    flex-direction: column;
+  }
+
+  .destaque-principal {
+    min-height: 260px;
+    padding: 1.75rem;
+  }
+
+  .destaque-principal h2 {
+    font-size: 1.35rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+}
